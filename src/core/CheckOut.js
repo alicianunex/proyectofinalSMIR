@@ -141,35 +141,6 @@ const CheckOut = ({ products, setRun = (f) => f, run = undefined }) => {
     </div>
   );
 
-  // const showError = (error) => {
-  //   if (error) {
-  //     return (
-  //       <div
-  //         className="alert alert-danger"
-  //         style={{
-  //           display: error ? '' : 'none',
-  //         }}
-  //       >
-  //         {error}
-  //       </div>
-  //     );
-  //   }
-  // };
-  // const showSuccess = (success) => {
-  //   if (success) {
-  //     return (
-  //       <div
-  //         className="alert alert-info"
-  //         style={{
-  //           display: success ? '' : 'none',
-  //         }}
-  //       >
-  //         "Thanks. Your Payment was SuccessFul"
-  //       </div>
-  //     );
-  //   }
-  // };
-
   const showCheckout = (success) => {
     return isAuthenticated() ? (
       <div>{showDropIn(success)}</div>
@@ -188,8 +159,6 @@ const CheckOut = ({ products, setRun = (f) => f, run = undefined }) => {
     <div>
       <h2>Total: {getTotal()}€</h2>
       {showLoading(data.loading)}
-      {/* {showSuccess(data.success)}
-      {showError(data.error)} */}
       {showCheckout(data.success)}
     </div>
   );
